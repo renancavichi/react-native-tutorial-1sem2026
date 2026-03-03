@@ -9,7 +9,7 @@ export default function Header(){
     )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // CSS in JS
     container: {
         flexDirection: "row",
         backgroundColor: "#000000",

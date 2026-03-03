@@ -7,9 +7,21 @@ export default function App() {
   return (
       <View style={styles.container}>
         <Header />
-        <CardUser />
-        <CardUser />
-        <CardUser />
+        <CardUser 
+          avatar={"https://github.com/renancavichi.png"}
+          name={"Renan Cavichi"}
+          email={"renancavichi@gmail.com"}
+        />
+        <CardUser
+          avatar={"https://github.com/maria.png"}
+          name={"Maria Silva"}
+          email={"maria.silva@gmail.com"}
+        />
+        <CardUser 
+          avatar={"https://github.com/josesantos.png"}
+          name={"José Santos"}
+          email={"jose.santos@gmail.com"}
+        />
         <StatusBar style="auto" />
       </View>
   );

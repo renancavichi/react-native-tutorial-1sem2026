@@ -8,7 +8,7 @@
 - O que é o React Native?
 - O que é o Expo?
 - Como estilizar um componente no React Native?
-- O estilo no React Native é igual ao CSS? Tenho todas as propriedades?
+- O estilo CSS in JS no React Native é igual ao CSS Web? Tenho todas as propriedades?
 
 ## Comandos Uteis
 

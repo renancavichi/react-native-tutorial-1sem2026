@@ -26,7 +26,7 @@ const props = { // Criação de um objeto props
 //const name = props.name
 //const email = props.email
 
-const {avatar, email} = props // Desestruturação de objetos
+const {avatar, name, email} = props // Desestruturação de objetos
 
 console.log(avatar) // "https://github.com/renancavichi.png"
 console.log(email) // "renancavichi@gmail.com"

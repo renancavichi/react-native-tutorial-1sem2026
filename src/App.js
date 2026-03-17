@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import Header from './components/Header';
 import FormSignUp from './components/FormSignUp';
+import Contador from './components/Contador';
 
 export default function App() {
   return (

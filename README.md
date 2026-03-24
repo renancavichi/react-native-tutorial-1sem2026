@@ -17,8 +17,10 @@
 
 Extra
 
-- Revisão de variáveis e objetos
-    - desestruturação de objetos
+- Variáveis e Objetos
+    - Desestruturação de objetos
+- Arrays
+- Condição Ternária 
 
 ## Comandos Uteis
 

@@ -11,7 +11,7 @@ export default function FormSignUp() {
   const handleSubmit = async () => {
     console.log({name, email, pass, avatar})
     
-    const response = await fetch("http://localhost:3000/user", {
+    const response = await fetch("http://localhost:3333/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

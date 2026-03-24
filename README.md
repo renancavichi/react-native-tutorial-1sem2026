@@ -12,6 +12,8 @@
 - Em quais pacotes encontro um componente de Imagem? Qual melhor para usarmos atualmente?
 - O que são propriedades de componentes?
 - O que são Hooks?
+- Para que serve e como funciona o useState?
+- Para que serve e como funciona o useEffect?
 
 Extra
 

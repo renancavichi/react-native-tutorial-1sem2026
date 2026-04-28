@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import Header from './components/Header';
-import CardProduct from './components/CardProduct';
+import Header from '../src/components/Header';
+import CardProduct from '../src/components/CardProduct';
 
 export default function App() {
   return (

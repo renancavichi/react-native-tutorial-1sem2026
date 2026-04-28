@@ -13,7 +13,7 @@ export default function Header(){
                 <FontAwesome style={styles.logo} name="users" size={26} color="#e7612b" />
                 <Text style={styles.logotipo}>Logo</Text>
             </View>
-            <Ionicons name="person-add-outline" size={24} color="white" onPress={() => router.push('/signup')} />
+            <Ionicons name="person-add-outline" size={24} color="white" onPress={() => router.push('/home')} />
         </View>
     )
 }

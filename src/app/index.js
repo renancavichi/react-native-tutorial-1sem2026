@@ -1,6 +1,7 @@
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import Button from '../components/Button';
 import { useRouter } from 'expo-router';
 
 export default function Login() {
@@ -11,7 +12,7 @@ export default function Login() {
         <Text>Login</Text>
         <Button title="Cadastrar" onPress={() => router.push('/signup')} />
         <Text>________</Text>
-        <Button title="Entrar" onPress={() => router.push('/home')} />
+        <Button title="Entrar" onPress={() => router.push('/home')} textStyle={{textTransform: 'capitalize'}}/>
         <StatusBar style="auto" />
       </View>
   );

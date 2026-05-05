@@ -1,5 +1,6 @@
-import { View, Text, StyleSheet, Button, TextInput} from 'react-native'
+import { View, Text, StyleSheet, TextInput} from 'react-native'
 import { useState } from 'react'
+import Button from './Button';
 
 export default function FormSignUp() {
 

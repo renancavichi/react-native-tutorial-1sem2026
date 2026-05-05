@@ -17,17 +17,18 @@
 - Para que serve e como funciona o useState?
 - Para que serve e como funciona o useEffect?
 - O que é Prop Drilling?
-
 Extra
-
 - Variáveis e Objetos
     - Desestruturação de objetos
 - Arrays
 - Condição Ternária
 
---- Próximos Tópicos
+--- Próximos Tópicos (Avaliação 2)
 
 - Navegação
+    - Quais os padrões de navegação do Expo Router vimos em aula?
+    - Quais as características de cada um deles?
+    - Posso utilizar apenas um deles ou ambos ao mesmo tempo no projeto? 
 - Zustand (estados globais)
 - AsyncStorage (Armazenamento Local)
 - Sistema de Login

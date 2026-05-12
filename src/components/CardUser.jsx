@@ -1,8 +1,13 @@
 import { StyleSheet, View, Text } from "react-native"
 import { Image } from "expo-image"
 import FontAwesome from '@expo/vector-icons/FontAwesome'
+import { useUserStore } from "../stores/userStore"
+import { useRouter } from "expo-router"
 
-export default function CardUser({id, avatar, name, email, users, setUsers}){
+export default function CardUser({id, avatar, name, email}){
+
+    const { users, setUsers, setUserToEdit } = useUserStore()
+    const router = useRouter()
 
     const handleDelete = async () => {
         const response = await fetch(`http://localhost:3333/user/${id}`, {
@@ -27,7 +32,7 @@ export default function CardUser({id, avatar, name, email, users, setUsers}){
                 source={avatar} // Imagem externa, url
             />
             <View style={styles.actions}>
-                <FontAwesome name="edit" size={19} color="black" />
+                <FontAwesome name="edit" size={19} color="black" onPress={() => {setUserToEdit({ id, avatar, name, email }); router.push("/edit-user")}} />
                 <FontAwesome name="trash-o" size={18} color="black" style={styles.trash} onPress={handleDelete} />
             </View>
             <View>

@@ -13,6 +13,13 @@ export default function RootLayout() {
                     headerShown: true,
                     title: "Cadastro", 
             }} />
+            <Stack.Screen 
+                name="edit-user"
+                options={{ 
+                    headerShown: true,
+                    title: "Editar Usuário",
+                    presentation: 'modal' 
+            }} />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
     )

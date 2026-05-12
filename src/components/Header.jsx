@@ -2,18 +2,20 @@ import {View, Text, StyleSheet} from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import { useRouter } from 'expo-router'
+import { useUserStore } from '../stores/userStore'
 
 export default function Header(){
 
+    const {users} = useUserStore()
     const router = useRouter()
 
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
                 <FontAwesome style={styles.logo} name="users" size={26} color="#e7612b" />
-                <Text style={styles.logotipo}>Logo</Text>
+                <Text style={styles.logotipo}>Logo - Users: {users.length}</Text>
             </View>
-            <Ionicons name="person-add-outline" size={24} color="white" onPress={() => router.push('/home')} />
+            <Ionicons name="person-add-outline" size={24} color="white" onPress={() => router.push('/signup')} />
         </View>
     )
 }

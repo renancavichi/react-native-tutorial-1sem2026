@@ -3,10 +3,11 @@ import { StyleSheet, View, Text } from 'react-native';
 import Header from '../../components/Header';
 import CardUser from '../../components/CardUser';
 import { useEffect, useState } from 'react';
+import { useUserStore } from '../../stores/userStore';
 
 export default function Home() {
 
-  const [users, setUsers] = useState([])
+  const { users, setUsers } = useUserStore()
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -37,8 +38,6 @@ export default function Home() {
             avatar={user.avatar}
             name={user.name}
             email={user.email}
-            users={users}
-            setUsers={setUsers}
           />
         ))}
         <StatusBar style="auto" />

@@ -3,16 +3,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 import Button from '../components/Button';
 import { useRouter } from 'expo-router';
+import FormLogin from '../components/FormLogin';
 
 export default function Login() {
   const router = useRouter()
 
   return (
       <View style={styles.container}>
-        <Text>Login</Text>
-        <Button title="Cadastrar" onPress={() => router.push('/signup')} />
-        <Text>________</Text>
-        <Button title="Entrar" onPress={() => router.push('/home')} textStyle={{textTransform: 'capitalize'}}/>
+        <View style={styles.form}>
+          <FormLogin />
+        </View>
+        <Button style={styles.signup} title="Cadastrar" onPress={() => router.push('/signup')} />
         <StatusBar style="auto" />
       </View>
   );
@@ -24,5 +25,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f7f7',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  signup:{
+    marginTop: 20,
+  },
+  form:{
+    width: "90%"
   }
 });

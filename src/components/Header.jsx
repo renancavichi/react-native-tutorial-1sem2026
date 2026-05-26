@@ -1,18 +1,25 @@
-import {View, Text, StyleSheet} from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome'
+import { Image } from 'expo-image'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import { useRouter } from 'expo-router'
 import { useUserStore } from '../stores/userStore'
+import { useAuthStore } from '../stores/authStore'
 
-export default function Header(){
+export default function Header() {
 
-    const {users} = useUserStore()
+    const { users } = useUserStore()
+    const { isLogged, user } = useAuthStore()
     const router = useRouter()
 
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <FontAwesome style={styles.logo} name="users" size={26} color="#e7612b" />
+                {isLogged && user ?
+                    <Image source={{ uri: user.avatar }} style={styles.avatar} />
+                    :
+                    <FontAwesome style={styles.logo} name="users" size={26} color="#e7612b" />
+                }
                 <Text style={styles.logotipo}>Logo - Users: {users.length}</Text>
             </View>
             <Ionicons name="person-add-outline" size={24} color="white" onPress={() => router.push('/signup')} />
@@ -31,7 +38,7 @@ const styles = StyleSheet.create({ // CSS in JS
         paddingHorizontal: 16,
         justifyContent: "space-between"
     },
-    logo:{
+    logo: {
         marginRight: 14
     },
     logotipo: {
@@ -40,5 +47,11 @@ const styles = StyleSheet.create({ // CSS in JS
     logoContainer: {
         flexDirection: "row",
         alignItems: "center"
+    },
+    avatar: {
+        width: 26,
+        height: 26,
+        borderRadius: 13,
+        marginRight: 14
     }
 })

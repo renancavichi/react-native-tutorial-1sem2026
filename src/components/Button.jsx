@@ -1,8 +1,8 @@
 import {View, Text, StyleSheet} from 'react-native'
 
-export default function Button({ title, onPress, boxStyle, textStyle }) {
+export default function Button({ title, onPress, style, textStyle }) {
     return (
-        <View onClick={onPress} style={[styles.container, boxStyle]}>
+        <View onClick={onPress} style={[styles.container, style]}>
             <Text style={[styles.title, textStyle]}>{title}</Text>
         </View>
     );

@@ -30,6 +30,7 @@ Extra
     - Quais as características de cada um deles?
     - Posso utilizar apenas um deles ou ambos ao mesmo tempo no projeto? 
 - Zustand (estados globais)
+    - Qual a diferença de usar estados com Zustand e com useState?
 - AsyncStorage (Armazenamento Local)
 - Sistema de Login JWT
     - As informações do Payload do JWT para quem possui o token são secretas?

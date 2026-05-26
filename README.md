@@ -31,7 +31,9 @@ Extra
     - Posso utilizar apenas um deles ou ambos ao mesmo tempo no projeto? 
 - Zustand (estados globais)
 - AsyncStorage (Armazenamento Local)
-- Sistema de Login
+- Sistema de Login JWT
+    - As informações do Payload do JWT para quem possui o token são secretas?
+    - Quem possui um token JWT (cliente) consegue saber a assinatura ou alterar os dados do token?
 - FlatList vs ScrollView
 
 ## Comandos Uteis

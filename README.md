@@ -38,7 +38,7 @@ Extra
     - As informações do Payload do JWT para quem possui o token são secretas?
     - Quem possui um token JWT (cliente) consegue saber a assinatura ou alterar os dados do token?
 - FlatList vs ScrollView
-    - Qual a diferença entre uma View, ScrollView e Flatlist.
+    - Qual a diferença entre uma View, ScrollView e FlatList.
 
 ## Comandos Uteis
 

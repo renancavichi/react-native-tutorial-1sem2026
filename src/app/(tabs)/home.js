@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, FlatList } from 'react-native';
 import Header from '../../components/Header';
 import CardUser from '../../components/CardUser';
 import { useEffect, useState } from 'react';
@@ -30,16 +30,21 @@ export default function Home() {
   return (
       <View style={styles.container}>
         <Header />
-
-       {isLoading ? <Text>Carregando...</Text> : users.map((user) => (
-          <CardUser
-            key={user.id}
-            id={user.id} 
-            avatar={user.avatar}
-            name={user.name}
-            email={user.email}
-          />
-        ))}
+       {isLoading ? <Text>Carregando...</Text> : 
+        <FlatList
+          data={users} //array de dados para renderizar
+          renderItem={({ item }) => // componente para renderizar cada item do array
+            <CardUser
+              id={item.id}
+              avatar={item.avatar}
+              name={item.name}
+              email={item.email}
+            />
+          }
+          keyExtractor={(item) => item.id} // chave única para cada item, importante para performance do Flatlist
+          style={styles.list}
+        />
+        }
         <StatusBar style="auto" />
       </View>
   );
@@ -51,6 +56,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f7f7',
     alignItems: 'center',
     //justifyContent: 'center',
+  },
+  list: {
+    width: "100%",
+    paddingHorizontal: 16,
   }
 });
 

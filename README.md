@@ -32,10 +32,13 @@ Extra
 - Zustand (estados globais)
     - Qual a diferença de usar estados com Zustand e com useState?
 - AsyncStorage (Armazenamento Local)
+    - Qual a diferença do AsyncStorage para o Zustante ou useState?
+    - Qual formato de valor o AsyncStorage aceita?
 - Sistema de Login JWT
     - As informações do Payload do JWT para quem possui o token são secretas?
     - Quem possui um token JWT (cliente) consegue saber a assinatura ou alterar os dados do token?
 - FlatList vs ScrollView
+    - Qual a diferença entre uma View, ScrollView e Flatlist.
 
 ## Comandos Uteis
 

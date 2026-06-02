@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         padding: 16,
         gap: 10,
         marginBottom: 20,
-        width: "80%",
+        width: "100%",
     },
     avatar:{
         backgroundColor: "#d0eaf1",

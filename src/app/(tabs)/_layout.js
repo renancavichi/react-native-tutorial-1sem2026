@@ -1,7 +1,15 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs } from 'expo-router';
+import { Tabs, Redirect } from 'expo-router';
+import { useAuthStore } from '../../stores/authStore'
 
 export default function TabLayout() {
+  const { isLogged } = useAuthStore();
+
+  //não permite acessar as rotas das tabs se não estiver logado
+  if (!isLogged) {
+    return <Redirect href="/" />;
+  }
+
   return (
     <Tabs screenOptions={{ 
       tabBarActiveTintColor: '#ef6d0a',

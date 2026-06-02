@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import {useEffect, useState} from 'react'
 import { useAuthStore } from '../../stores/authStore';
 import { Image } from 'expo-image';
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function Profile() {
  
@@ -34,8 +35,9 @@ export default function Profile() {
     getUser()
   }, [])
 
-  const handleLogout = () => {
+  const handleLogout = async() => {
     logout()
+    await AsyncStorage.removeItem("userLogged")
     router.replace("/")
   }
 

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Button from './Button';
 import { useAuthStore } from '../stores/authStore';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function FormLogin() {
 
@@ -25,7 +26,10 @@ export default function FormLogin() {
       console.log("Usuário logado com sucesso!")
       const data = await response.json()
       console.log(data)
+      // Salva os dados do usuário e token na memória
       login(data.user, data.token)
+      // Salva os dados do usuário e token no AsyncStorage para persistência
+      await AsyncStorage.setItem("userLogged", JSON.stringify(data))
       router.replace("/home")
     } else {
       console.log("Erro ao logar usuário")

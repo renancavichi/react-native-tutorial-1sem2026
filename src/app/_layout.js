@@ -18,7 +18,17 @@ export default function RootLayout() {
                 options={{ 
                     headerShown: true,
                     title: "Editar Usuário",
-                    presentation: 'modal' 
+                    //presentation: 'modal',
+                    presentation: 'formSheet',
+                    sheetAllowedDetents: [0.5, 0.9],
+                    sheetInitialDetentIndex: 1,
+                    sheetGrabberVisible: true,
+                    sheetCornerRadius: 24, 
+            }} />
+            <Stack.Screen 
+                name="login"
+                options={{ 
+                    headerShown: false
             }} />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
